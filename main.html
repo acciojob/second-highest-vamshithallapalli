@@ -9,7 +9,20 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			
+
+			arr = arr.map(Number);
+
+    if (arr.length < 2) return -Infinity;
+
+    const uniq = [...new Set(arr)];
+
+    if (uniq.length < 2) return -Infinity;
+
+    uniq.sort((a, b) => b - a);
+
+    return uniq[1];
+			
 			
 		}
 
